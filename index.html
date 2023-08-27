@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeezotje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <div class="header__logo">
+                        <a href="index.html" class="header__logo-link">
+                            <img class="header__logo-img" src="images/logo_black.png" alt="logo">
+                            <img class="header__logo-img-white" src="images/logo_white.png" alt="logo">
+                        </a>
+                    </div>
+                    <nav class="header__menu">
+
+                        <button class="header__menu-btn-close">
+                            <img src="images/icon/close.svg" alt="">
+                        </button>
+
+                        <ul class="header__menu-list">
+                            <li class="header__menu-list-item">
+                                <a class="header__menu-list-link" href="#">À la carte</a>
+                            </li>
+                            <li class="header__menu-list-item">
+                                <a class="header__menu-list-link" href="#">Wijnkaart</a>
+                            </li>
+                            <li class="header__menu-list-item">
+                                <a class="header__menu-list-link" href="#">Lunchmenu</a>
+                            </li>
+                            <li class="header__menu-list-item">
+                                <a class="header__menu-list-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="header__menu-phone">
+                            <img class="header__menu-phone-icon" src="images/icon/icon-call.png" alt="Call us">
+                            <a class="header__menu-phone-number" href="tel:+3292825725">+32 9 282 57 25</a>
+                        </div>
+                    </nav>
+
+                    <div class="header__phone">
+                        <img class="header__phone-icon" src="images/icon/icon-call.png" alt="Call us">
+                        <a class="header__phone-number" href="tel:+3292825725">+32 9 282 57 25</a>
+                    </div>
+
+                    <button class="header__menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+
+                <div class="header__text">
+                    <h2 class="header__subtitle">OPEN EVERYDAY 6AM - 9PM</h2>
+                    <h1 class="header__title">A bad day with lunch is better than a good day without it.</h1>
+                </div>
+                <div class="social">
+                    <button class="btn-main" onclick="openForm()">Reserve a table</button>
+
+                    <div class="social__links">
+                        <a class="social__link" href="#">
+                            <img class="social__img" src="images/icon/facebook.svg" alt="facebook icon">
+                            <img class="social__img-white" src="images/icon/facebook-white.svg" alt="facebook icon">
+                        </a>
+                        <a class="social__link" href="#">
+                            <img class="social__img" src="images/icon/instagram.svg" alt="instagram icon">
+                            <img class="social__img-white" src="images/icon/instagram-white.svg" alt="instagram icon">
+
+                        </a>
+                        <a class="social__link" href="#">
+                            <img class="social__img" src="images/icon/twitter.svg" alt="twitter icon">
+                            <img class="social__img-white" src="images/icon/twitter-white.svg" alt="twitter icon">
+                        </a>
+                        <a class="social__link" href="#">
+                            <img class="social__img" src="images/icon/youtube.svg" alt="youtube icon">
+                            <img class="social__img-white" src="images/icon/youtube-white.svg" alt="youtube icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form" id="myForm">
+                    <form action="#" id="reservationForm" class="form__body">
+                        <div class="form__body-top">
+                            <h1 class="form__title">Reserve a table</h1>
+                            <button class="form__btn-close" onclick="closeForm()"><img src="images/icon/close.svg"
+                                    alt=""></button>
+                        </div>
+                        <div class="form__wrapper">
+                            <div class="form__item">
+                                <label for="formName" class="form__label">Name</label>
+                                <input id="formName" class="form__input" placeholder="Input your name" name="name">
+                            </div>
+
+                            <div class="form__item">
+                                <label for="formEmail" class="form__label">Email</label>
+                                <input id="formEmail" class="form__input" placeholder="Input your email" name="Email">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label for="formRequest" class="form__label">Special Request</label>
+
+                            <input id="formRequest" class="form__input form__input-textarea" name="request"
+                                placeholder="Input your special request">
+
+                        </div>
+                        <button type="submit" id="sendForm" class="form__btn">Send</button>
+                        <div class="form__result-message" id="resultMessage"></div>
+                    </form>
+
+                </div>
+                <img src="images/header-bg.jpg" alt="Our interior" class="header__image">
+
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="quote-slider">
+                <div class="container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="quote-slider__inner">
+                                    <img class="quote-slider__img" src="images/quote.png" alt="Quote">
+                                    <h1 class="quote-slider__title">Goede service, lekker eten, toffe ambiance</h1>
+                                    <p class="quote-slider__text">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                        elitr,
+                                        sed
+                                        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                        sed
+                                        diam
+                                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita
+                                        kasd
+                                        gubergren.
+                                    </p>
+                                    <h2 class="quote-slider__author">
+                                        ALAIN HEYNDRICKX
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="quote-slider__inner">
+                                    <img class="quote-slider__img" src="images/quote.png" alt="Quote">
+                                    <h1 class="quote-slider__title">Goede service, lekker eten, toffe ambiance</h1>
+                                    <p class="quote-slider__text">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                        elitr,
+                                        sed
+                                        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                        sed
+                                        diam
+                                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita
+                                        kasd
+                                        gubergren.
+                                    </p>
+                                    <h2 class="quote-slider__author">
+                                        ALAIN HEYNDRICKX
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="quote-slider__inner">
+                                    <img class="quote-slider__img" src="images/quote.png" alt="Quote">
+                                    <h1 class="quote-slider__title">Goede service, lekker eten, toffe ambiance</h1>
+                                    <p class="quote-slider__text">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                        elitr,
+                                        sed
+                                        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                        sed
+                                        diam
+                                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita
+                                        kasd
+                                        gubergren.
+                                    </p>
+                                    <h2 class="quote-slider__author">
+                                        ALAIN HEYNDRICKX
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__logo">
+                        <a href="index.html" class="footer__logo-link">
+                            <img class="footer__logo-img" src="images/logo_black.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="footer__social-links">
+                        <a class="footer__social-link" href="#">
+                            <img class="footer__social-img" src="images/icon/facebook.svg" alt="facebook icon">
+                        </a>
+                        <a class="footer__social-link" href="#">
+                            <img class="footer__social-img" src="images/icon/instagram.svg" alt="instagram icon">
+                        </a>
+                        <a class="footer__social-link" href="#">
+                            <img class="footer__social-img" src="images/icon/twitter.svg" alt="twitter icon">
+                        </a>
+                        <a class="footer__social-link" href="#">
+                            <img class="footer__social-img" src="images/icon/youtube.svg" alt="youtube icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+
+        //Инициализация слайдера
+        const swiper = new Swiper(".swiper", {
+            speed: 400,
+            spaceBetween: 100,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
