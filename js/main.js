@@ -27,7 +27,6 @@ function closeForm() {
 
 $(document).ready(function () {
     $("#reservationForm").on("submit", function (event) {
-        const form = document.getElementById('form');
         event.preventDefault();
 
         const data = {
@@ -35,6 +34,8 @@ $(document).ready(function () {
             email: $("#formEmail").val(),
             request: $("#formRequest").val()
         };
+        console.log(data);
+
 
         if (data.name == "") {
             $("#resultMessage").text("Please fill in name");
@@ -46,24 +47,20 @@ $(document).ready(function () {
         $("#resultMessage").text("");
 
         $.ajax({
-            url: 'sendmail.php',
+            url: '/sendmail.php',
             type: 'POST',
-            cache: false,
-            data: { 'name': data.name, 'email': data.email, 'request': data.request },
-            dataType: 'html',
-            beforeSend: function () {
-                $("#sendForm").prop("disabled", true);
-            },
+            data: data,
             success: function (response) {
-                $("#resultMessage").text(response);
-                $("#sendForm").prop("disabled", false);
-                form.reset();
-                alert('Reserved');
-            },
-            error: function (jqXHR, text, error) {
-                $("#resultMessage").text(error);
+                console.log(response);
+                if (response != null) {
+                    $("#resultMessage").text(response);
+                } else {
+                    $("#resultMessage").text(error);
+                    // $("#resultMessage").text(response);
+                    // formPreview.innerHTML = '';
+                    // form.reset();
+                }
             }
         });
-
     });
 });
