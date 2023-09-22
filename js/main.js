@@ -1,4 +1,3 @@
-
 //Открытие/закрытие меню
 
 $(function () {
@@ -23,7 +22,7 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
-//Отправка данных формы AJAX
+//Отправка данных формы резервации AJAX
 
 $(document).ready(function () {
     $("#reservationForm").on("submit", function (event) {
@@ -44,6 +43,7 @@ $(document).ready(function () {
             $("#resultMessage").text("Please fill in email");
             return false;
         }
+
         $("#resultMessage").text("");
 
         $.ajax({
@@ -51,15 +51,49 @@ $(document).ready(function () {
             type: 'POST',
             data: data,
             success: function (response) {
-                console.log(response);
-                if (response != null) {
-                    $("#resultMessage").text(response);
-                } else {
-                    $("#resultMessage").text(error);
-                    // $("#resultMessage").text(response);
-                    // formPreview.innerHTML = '';
-                    // form.reset();
-                }
+                $("#resultMessage").text(response);
+                $('#reservationForm')[0].reset();
+            },
+            error: function (jqXHR, text, error) {
+                $("#resultMessage").text(error);
+            }
+        });
+    });
+});
+
+
+$(document).ready(function () {
+    $("#questionsForm").on("submit", function (event) {
+        event.preventDefault();
+
+        const data = {
+            name: $("#formQName").val(),
+            email: $("#formQEmail").val(),
+            request: $("#formQRequest").val()
+        };
+        console.log(data);
+
+
+        if (data.name == "") {
+            $("#resultQMessage").text("Please fill in name");
+            return false;
+        } else if (data.email == "") {
+            $("#resultQMessage").text("Please fill in email");
+            return false;
+        }
+
+        $("#resultQMessage").text("");
+
+        $.ajax({
+            url: '/sendquestion.php',
+            type: 'POST',
+            data: data,
+            success: function (response) {
+                $("#resultQMessage").text(response);
+                $('#questionsForm')[0].reset();
+            },
+            error: function (jqXHR, text, error) {
+                $("#resultQMessage").text(error);
             }
         });
     });

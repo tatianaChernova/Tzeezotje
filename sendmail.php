@@ -13,7 +13,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     if (mail($mailTo, $subject, $message, $headers)) {
         echo "Thank you, " . $_POST['name'] . ", for your reservation!";
     } else {
-        echo "Error! Please try again";
+        echo "Error occured, please try again";
     }
 }
 
