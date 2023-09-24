@@ -24,7 +24,7 @@ body {
 
 @media (min-width: 320px) {
     .container {
-        max-width: 300px;
+        max-width: 310px;
         margin: 0 auto;
         padding: 0 17px;
     }
@@ -479,6 +479,7 @@ body {
             display: flex;
             flex-direction: column;
             gap: 30px;
+
         }
 
         &__text {
@@ -511,6 +512,16 @@ body {
 
         &__img {
             max-width: 670px;
+            transition: transform 1s cubic-bezier(0.55, 0.09, 0.83, 1.4);
+        }
+
+        &__item:hover .offers__img:nth-child(1),
+        &__item:hover .offers__img:nth-child(3) {
+            transform: translateX(-5%);
+        }
+
+        &__item:hover .offers__img:nth-child(2) {
+            transform: translateX(5%);
         }
 
         &__text:nth-child(2) {
@@ -634,18 +645,18 @@ body {
 
 @media(min-width:400px) {
     .container {
-        max-width: 320px;
+        max-width: 380px;
     }
 
     .header__text {
-        margin-top: -110%;
+        margin-top: -90%;
     }
 
 }
 
 @media(min-width:450px) {
     .container {
-        max-width: 400px;
+        max-width: 410px;
     }
 
     .header__text {
