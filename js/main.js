@@ -1,15 +1,8 @@
 //Открытие/закрытие меню
 
-$(function () {
-
-    $('.header__menu-btn-close').on('click', function () {
-        $('.header__menu').removeClass('header__menu--open');
-    });
-
-    $('.header__menu-btn').on('click', function () {
-        $('.header__menu').addClass('header__menu--open');
-    });
-
+$('.header__menu-btn').on('click', function () {
+    $('.header__menu-btn, .header__menu').toggleClass('active');
+    $('.body').toggleClass('lock');
 });
 
 //Открытие/закрытие формы

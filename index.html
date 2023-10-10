@@ -10,11 +10,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -22,56 +23,48 @@
         <header class="header">
             <div class="container">
                 <div class="header__top">
-                    <div class="header__logo">
-                        <a href="index.html" class="header__logo-link">
-                            <img class="header__logo-img" src="images/logo_black.png" alt="logo">
-                            <img class="header__logo-img-white" src="images/logo_white.png" alt="logo">
-                        </a>
-                    </div>
-                    <nav class="header__menu">
-
-                        <button class="header__menu-btn-close">
-                            <img src="images/icon/close.svg" alt="">
-                        </button>
-
-                        <ul class="header__menu-list">
-                            <li class="header__menu-list-item">
-                                <a class="header__menu-list-link" href="#">À la carte</a>
-                            </li>
-                            <li class="header__menu-list-item">
-                                <a class="header__menu-list-link" href="#">Wijnkaart</a>
-                            </li>
-                            <li class="header__menu-list-item">
-                                <a class="header__menu-list-link" href="#">Lunchmenu</a>
-                            </li>
-                            <li class="header__menu-list-item">
-                                <a class="header__menu-list-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-
-                        <div class="header__menu-phone">
-                            <img class="header__menu-phone-icon" src="images/icon/icon-call.png" alt="Call us">
-                            <a class="header__menu-phone-number" href="tel:+3292825725">+32 9 282 57 25</a>
+                    <div class="header__body">
+                        <div class="header__logo">
+                            <a href="index.html" class="header__logo-link">
+                                <img class="header__logo-img" src="images/icon/logo_black.png" alt="logo">
+                                <img class="header__logo-img-white" src="images/icon/logo_white.png" alt="logo">
+                            </a>
                         </div>
-                    </nav>
 
-                    <div class="header__phone">
-                        <img class="header__phone-icon" src="images/icon/icon-call.png" alt="Call us">
-                        <a class="header__phone-number" href="tel:+3292825725">+32 9 282 57 25</a>
+                        <nav class="header__menu">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-list-item">
+                                    <a class="header__menu-list-link" href="#">À la carte</a>
+                                </li>
+                                <li class="header__menu-list-item">
+                                    <a class="header__menu-list-link" href="#">Wijnkaart</a>
+                                </li>
+                                <li class="header__menu-list-item">
+                                    <a class="header__menu-list-link" href="#">Lunchmenu</a>
+                                </li>
+                                <li class="header__menu-list-item">
+                                    <a class="header__menu-list-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+
+                            <div class="header__menu-phone">
+                                <img class="header__menu-phone-icon" src="images/icon/icon-call.png" alt="Call us">
+                                <a class="header__menu-phone-number" href="tel:+3292825725">+32 9 282 57 25</a>
+                            </div>
+
+                        </nav>
+                        <div class="header__phone">
+                            <img class="header__phone-icon" src="images/icon/icon-call.png" alt="Call us">
+                            <a class="header__phone-number" href="tel:+3292825725">+32 9 282 57 25</a>
+                        </div>
+                        <button class="header__menu-btn"><span></span></button>
                     </div>
-
-                    <button class="header__menu-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
                 </div>
-
                 <div class="header__text">
                     <h2 class="header__subtitle">OPEN EVERYDAY 6AM - 9PM</h2>
-                    <h1 class="header__title">A bad day with lunch is better than a good day without it.</h1>
+                    <h1 class="header__title">A bad day with lunch is better than a good day without it</h1>
                 </div>
+
                 <div class="social">
                     <button class="btn-main" onclick="openForm()">Reserve a table</button>
 
@@ -83,7 +76,6 @@
                         <a class="social__link" href="#">
                             <img class="social__img" src="images/icon/instagram.svg" alt="instagram icon">
                             <img class="social__img-white" src="images/icon/instagram-white.svg" alt="instagram icon">
-
                         </a>
                         <a class="social__link" href="#">
                             <img class="social__img" src="images/icon/twitter.svg" alt="twitter icon">
@@ -252,7 +244,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="quote-slider__inner">
-                                    <img class="quote-slider__img" src="images/quote.png" alt="Quote">
+                                    <img class="quote-slider__img" src="images/icon/quote.png" alt="Quote">
                                     <h1 class="quote-slider__title">Goede service, lekker eten, toffe ambiance</h1>
                                     <p class="quote-slider__text">Lorem ipsum dolor sit amet, consetetur sadipscing
                                         elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -265,7 +257,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="quote-slider__inner">
-                                    <img class="quote-slider__img" src="images/quote.png" alt="Quote">
+                                    <img class="quote-slider__img" src="images/icon/quote.png" alt="Quote">
                                     <h1 class="quote-slider__title">Goede service, lekker eten, toffe ambiance</h1>
                                     <p class="quote-slider__text">Lorem ipsum dolor sit amet, consetetur sadipscing
                                         elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -278,7 +270,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="quote-slider__inner">
-                                    <img class="quote-slider__img" src="images/quote.png" alt="Quote">
+                                    <img class="quote-slider__img" src="images/icon/quote.png" alt="Quote">
                                     <h1 class="quote-slider__title">Goede service, lekker eten, toffe ambiance</h1>
                                     <p class="quote-slider__text">Lorem ipsum dolor sit amet, consetetur sadipscing
                                         elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -375,28 +367,28 @@
                             <h1 class="contacts__title">Contacts</h1>
                             <ul class="contacts__list">
                                 <li class="contacts__list-item">
-                                    <img src="images/phone.svg" alt="" class="contacts__icon">
+                                    <img src="images/icon/phone.svg" alt="" class="contacts__icon">
                                     <div class="contacts__info">
                                         <p class="contacts__info-title">Phone Number</p>
                                         <p class="contacts__info-text">+32 9 282 57 25</p>
                                     </div>
                                 </li>
                                 <li class="contacts__list-item">
-                                    <img src="images/email.svg" alt="" class="contacts__icon">
+                                    <img src="images/icon/email.svg" alt="" class="contacts__icon">
                                     <div class="contacts__info">
                                         <p class="contacts__info-title">Email</p>
                                         <p class="contacts__info-text">info@email.com</p>
                                     </div>
                                 </li>
                                 <li class="contacts__list-item">
-                                    <img src="images/open.svg" alt="" class="contacts__icon">
+                                    <img src="images/icon/open.svg" alt="" class="contacts__icon">
                                     <div class="contacts__info">
                                         <p class="contacts__info-title">Opening Hours</p>
                                         <p class="contacts__info-text">Everyday from 6 AM - 9 PM</p>
                                     </div>
                                 </li>
                                 <li class="contacts__list-item">
-                                    <img src="images/address.svg" alt="" class="contacts__icon">
+                                    <img src="images/icon/address.svg" alt="" class="contacts__icon">
                                     <div class="contacts__info">
                                         <p class="contacts__info-title">Map Street</p>
                                         <p class="contacts__info-text">Jl. Raya Surabaya 2787</p>
@@ -410,13 +402,13 @@
                                     <h1 class="form-questions__title">have any questions?</h1>
                                     <div class="form__wrapper">
                                         <div class="form__item">
-                                            <label for="formName" class="form__label">Name</label>
+                                            <label for="formQName" class="form__label">Name</label>
                                             <input id="formQName" class="form__input form-questions__input"
                                                 placeholder="Input your name" name="name">
                                         </div>
 
                                         <div class="form__item">
-                                            <label for="formEmail" class="form__label">Email</label>
+                                            <label for="formQEmail" class="form__label">Email</label>
                                             <input id="formQEmail" class="form__input form-questions__input"
                                                 placeholder="Input your email" name="Email">
                                         </div>
@@ -424,7 +416,7 @@
                                     <div class="form__item">
                                         <label for="formQRequest" class="form__label">Speciale Request</label>
 
-                                        <textarea id="formRequest"
+                                        <textarea id="formQRequest"
                                             class="form__input form__input-textarea form-questions__input"
                                             name="request" placeholder="Input your special request"></textarea>
                                     </div>
@@ -434,15 +426,15 @@
                             </div>
                         </div>
                     </div>
-
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63223.69641528569!2d112.6143836!3d-7.9491404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7d136d1c254e5%3A0xee8ce237973a1bc5!2sJl.%20Raya%20Surabaya%20-%20Malang%2C%20Kota%20Malang%2C%20Jawa%20Timur%2C%20Indonesia!5e0!3m2!1sen!2s!4v1695210751188!5m2!1sen!2s"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-
+                    <div class="map__inner">
+                        <iframe class="map"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63223.69641528569!2d112.6143836!3d-7.9491404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7d136d1c254e5%3A0xee8ce237973a1bc5!2sJl.%20Raya%20Surabaya%20-%20Malang%2C%20Kota%20Malang%2C%20Jawa%20Timur%2C%20Indonesia!5e0!3m2!1sen!2s!4v1695210751188!5m2!1sen!2s"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </section>
-
         </main>
 
         <footer class="footer">
@@ -450,7 +442,7 @@
                 <div class="footer__wrapper">
                     <div class="footer__logo">
                         <a href="index.html" class="footer__logo-link">
-                            <img class="footer__logo-img" src="images/logo_black.png" alt="logo">
+                            <img class="footer__logo-img" src="images/icon/logo_black.png" alt="logo">
                         </a>
                     </div>
 
@@ -471,6 +463,7 @@
                 </div>
             </div>
         </footer>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script type="module">
@@ -490,14 +483,23 @@
             },
         });
         const imageSwiper = new Swiper('.image-slider', {
-            slidesPerView: 1.5,
-            centeredSlides: true,
-            spaceBetween: 30,
+            autoplay: false,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            slideToCLickedSlide: true,
+            breakpoints: {
+                319: {
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                    centeredSlides: true,
+                },
+                1249: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    centeredSlides: false,
+                },
+            }
         });
 
     </script>
