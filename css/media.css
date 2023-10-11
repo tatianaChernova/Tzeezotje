@@ -337,6 +337,7 @@
   }
   .header__menu-list-link:hover {
     color: #3A4574;
+    text-decoration: underline;
   }
   .header__menu-phone {
     margin-bottom: 20px;
