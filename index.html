@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="form" id="myForm">
-                    <form action="/sendmail.php" class="form__body" id="reservationForm">
+                    <form action="/sendmail.php" class="form__body" id="reservationForm" autocomplete="on">
                         <div class="form__body-top">
                             <h1 class="form__title">Reserve a table</h1>
                             <button class="form__btn-close" onclick="closeForm()"><img src="images/icon/close.svg"
@@ -98,19 +98,21 @@
                         <div class="form__wrapper">
                             <div class="form__item">
                                 <label for="formName" class="form__label">Name</label>
-                                <input id="formName" class="form__input" placeholder="Input your name" name="name">
+                                <input id="formName" class="form__input" placeholder="Input your name" name="name"
+                                    autocomplete="given-name">
                             </div>
 
                             <div class="form__item">
                                 <label for="formEmail" class="form__label">Email</label>
-                                <input id="formEmail" class="form__input" placeholder="Input your email" name="Email">
+                                <input id="formEmail" class="form__input" placeholder="Input your email" name="Email"
+                                    autocomplete="on">
                             </div>
                         </div>
                         <div class="form__item">
                             <label for="formRequest" class="form__label">Speciale Request</label>
 
                             <textarea id="formRequest" class="form__input form__input-textarea" name="request"
-                                placeholder="Input your special request"></textarea>
+                                placeholder="Input your special request" autocomplete="off"></textarea>
 
                         </div>
                         <button type="submit" id="sendForm" class="form__btn">Send</button>
@@ -118,7 +120,7 @@
                     </form>
 
                 </div>
-                <img src="images/header-bg.jpg" alt="Our interior" class="header__image">
+                <img src="images/header.jpg" alt="Our interior" class="header__image">
 
             </div>
         </header>
@@ -240,7 +242,7 @@
 
             <section class="quote-slider">
                 <div class="container">
-                    <div class="swiper">
+                    <div class="swiper quote-slider-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="quote-slider__inner">
@@ -338,7 +340,6 @@
 
                     </div>
                 </div>
-
                 <div class="image-slider__wrapper swiper-wrapper">
                     <div class="image-slider__slide swiper-slide">
                         <div class="image-slider__img">
@@ -358,6 +359,7 @@
                 </div>
                 <div class="swiper-button-prev image-slider-prev"></div>
                 <div class="swiper-button-next image-slider-next"></div>
+
             </section>
 
             <section class="contacts">
@@ -398,19 +400,20 @@
                         </div>
                         <div class="contacts__right">
                             <div class="form-questions" id="questionsForm">
-                                <form action="/sendquestion.php" class="form-questions__body" id="questionsForm">
+                                <form action="/sendquestion.php" class="form-questions__body" id="questionsForm"
+                                    autocomplete="on">
                                     <h1 class="form-questions__title">have any questions?</h1>
                                     <div class="form__wrapper">
                                         <div class="form__item">
                                             <label for="formQName" class="form__label">Name</label>
                                             <input id="formQName" class="form__input form-questions__input"
-                                                placeholder="Input your name" name="name">
+                                                placeholder="Input your name" name="name" autocomplete="given-name">
                                         </div>
 
                                         <div class="form__item">
                                             <label for="formQEmail" class="form__label">Email</label>
                                             <input id="formQEmail" class="form__input form-questions__input"
-                                                placeholder="Input your email" name="Email">
+                                                placeholder="Input your email" name="Email" autocomplete="on">
                                         </div>
                                     </div>
                                     <div class="form__item">
@@ -418,7 +421,8 @@
 
                                         <textarea id="formQRequest"
                                             class="form__input form__input-textarea form-questions__input"
-                                            name="request" placeholder="Input your special request"></textarea>
+                                            name="request" placeholder="Input your special request"
+                                            autocomplete="off"></textarea>
                                     </div>
                                     <button type="submit" id="sendForm" class="form__btn">Send</button>
                                     <div class="form__result-message" id="resultQMessage"></div>
@@ -470,20 +474,19 @@
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
 
         //Инициализация слайдеров
-        const swiper = new Swiper(".swiper", {
+        const swiper = new Swiper(".quote-slider-swiper", {
             speed: 400,
-            spaceBetween: 100,
             navigation: {
                 nextEl: '.quote-slider-next',
                 prevEl: '.quote-slider-prev',
             },
             autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
         });
         const imageSwiper = new Swiper('.image-slider', {
-            autoplay: false,
+            centeredSlides: true,
+            speed: 400,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -491,13 +494,24 @@
             breakpoints: {
                 319: {
                     slidesPerView: 1,
-                    spaceBetween: 5,
-                    centeredSlides: true,
+                    spaceBetween: 20,
+                },
+                766: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 20,
+                },
+                899: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 30,
                 },
                 1249: {
                     slidesPerView: 1.5,
-                    spaceBetween: 10,
-                    centeredSlides: false,
+                    spaceBetween: 30,
+                },
+
+                1599: {
+                    slidesPerView: 1.95,
+                    spaceBetween: 30,
                 },
             }
         });

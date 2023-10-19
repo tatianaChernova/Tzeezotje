@@ -58,9 +58,7 @@ body {
     background-position: top center;
 
     &__top {
-        padding-top: 55px;
-        margin-bottom: 153px;
-
+        padding: 55px 0;
         color: @white;
     }
 
@@ -95,7 +93,7 @@ body {
     &__menu-list {
         margin-bottom: 20px;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 1.46;
         font-weight: 500;
         padding: 0;
         margin: 0;
@@ -116,7 +114,7 @@ body {
     &__menu-list-link {
         padding: 0;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 1.46;
         font-weight: 500;
         color: @white;
 
@@ -155,16 +153,15 @@ body {
     }
 
     &__text {
-        padding: 100px 0 0 0;
+        padding: 99px 0 0 0;
         margin-bottom: 42px;
         margin-top: 0;
         z-index: 10;
     }
 
     &__title {
-
         font-size: 64px;
-        line-height: 88px;
+        line-height: 1.375;
         font-weight: 700;
         color: @white;
     }
@@ -172,10 +169,10 @@ body {
     &__subtitle {
         margin-bottom: 24px;
         font-size: 24px;
-        line-height: 32px;
+        line-height: 1.33;
         font-weight: 500;
+        letter-spacing: 1.9px;
         text-transform: uppercase;
-
         color: @white;
         animation-name: color;
         animation-duration: 4s;
@@ -233,7 +230,6 @@ body {
     padding-left: 25px;
 }
 
-
 .form * {
     outline: none;
 }
@@ -263,7 +259,7 @@ body {
     &__title {
         margin-bottom: 28px;
         font-size: 24px;
-        line-height: 44px;
+        line-height: 1.83;
         font-weight: 700;
     }
 
@@ -279,13 +275,14 @@ body {
     }
 
     &__item {
-        margin-right: 10px;
-        margin-bottom: 10px;
+        margin-right: 18px;
+        margin-bottom: 3px;
+        width: 100%;
     }
 
     &__input {
-        padding: 15px;
-        margin: 5px 0 22px 0;
+        padding: 26px 5px 26px 15px;
+        margin: 10px 0 22px 0;
         width: 100%;
         border: 1px solid @darkgrey;
         background: @firstgrey;
@@ -298,20 +295,19 @@ body {
         &::placeholder {
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
-            line-height: 27px;
+            line-height: 1.5;
             font-weight: 400;
             color: @darkgrey;
         }
     }
 
     &__input-textarea {
-        padding: 15px;
-        margin: 5px 0 22px 0;
-        min-height: 120px;
+        padding: 26px 49px 26px 15px;
+        margin: 10px 0 10px 0;
+        min-height: 125px;
         width: 100%;
         color: @darkgrey;
         resize: none;
-        padding: 10px;
         border: 1px solid @darkgrey;
         background: @firstgrey;
         transition: all 0.5s ease 0s;
@@ -323,18 +319,20 @@ body {
         &::placeholder {
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
-            line-height: 27px;
+            line-height: 1.5;
             font-weight: 400;
             color: @darkgrey;
         }
     }
 
     &__btn {
-        width: auto;
-        padding: 15px 45px;
+        padding: 37px 105px;
         background-color: @primary;
         border: 1px solid @primary;
         color: @white;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
         border: none;
         cursor: pointer;
         margin-bottom: 10px;
@@ -349,7 +347,7 @@ body {
 }
 
 .specialities {
-    margin-bottom: 158px;
+    margin-bottom: 153px;
 
     &__inner {
         display: flex;
@@ -375,7 +373,7 @@ body {
         padding-right: 12px;
         font-size: 24px;
         font-weight: 600;
-        line-height: 32px;
+        line-height: 1.33;
         text-align: left;
     }
 
@@ -387,13 +385,23 @@ body {
         gap: 12px;
     }
 
+    &__left,
+    &__right {
+        font-size: 18px;
+        line-height: 1.78;
+    }
+
     &__item-inner svg+&__item-inner svg {
         padding-right: 8px;
     }
 
+
     &__photo-inner {
         display: flex;
+        justify-content: start;
+        align-items: start;
         position: absolute;
+        height: 486px;
     }
 
     &__photo:nth-child(1) {
@@ -433,7 +441,7 @@ body {
 }
 
 .quote-slider {
-    padding-top: 30px;
+    padding-top: 46px;
     margin-bottom: 110px;
     width: 100%;
     min-height: 782px;
@@ -454,7 +462,7 @@ body {
     &__title {
         margin-bottom: 17px;
         font-size: 36px;
-        line-height: 40px;
+        line-height: 1.11;
         font-weight: 600;
         color: @secondary;
     }
@@ -462,7 +470,7 @@ body {
     &__text {
         margin-bottom: 32px;
         font-size: 16px;
-        line-height: 40px;
+        line-height: 2.5;
         font-weight: 400;
         color: @white;
     }
@@ -470,7 +478,7 @@ body {
     &__author {
         margin-bottom: 170px;
         font-size: 24px;
-        line-height: 40px;
+        line-height: 1.66;
         font-weight: 600;
         letter-spacing: 5.88px;
         color: @secondary;
@@ -506,7 +514,7 @@ body {
         padding-top: 178px;
         margin-bottom: 20px;
         font-size: 40px;
-        line-height: 88px;
+        line-height: 2.2;
         position: relative;
 
         &::after {
@@ -524,7 +532,7 @@ body {
     &__descr {
         color: @thirdgrey;
         font-size: 14px;
-        line-height: 32px;
+        line-height: 2;
     }
 
     &__img {
@@ -534,97 +542,88 @@ body {
 
     &__item:hover .offers__img:nth-child(1),
     &__item:hover .offers__img:nth-child(3) {
-        transform: translateX(-5%);
-    }
-
-    &__item:hover .offers__img:nth-child(2) {
         transform: translateX(5%);
     }
 
-    // &__text:nth-child(2) {
-    //     order: -1;
-    // }
+    &__item:hover .offers__img:nth-child(2) {
+        transform: translateX(-5%);
+    }
 }
 
+// Next section
+
 .image-slider {
-    margin-bottom: 100px;
-    display: block;
+    margin-bottom: 104px;
 
     &__background-wrapper {
         background-color: @primary;
-        margin-bottom: -18.5%;
-        object-fit: cover;
+        margin-bottom: -345px;
         height: 605px;
     }
 
     &__text-wrapper {
-        padding-top: 68px;
+        padding-top: 71px;
         text-align: left;
         color: @white;
     }
 
     &__title {
         font-size: 48px;
-        line-height: 83px;
+        line-height: 1.7;
         font-weight: 700;
     }
 
     &__text {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 32px;
+        line-height: 2;
     }
 
-    &__wrapper {
+    &__img {
         height: 646px;
     }
 
     &__img img {
-        max-width: 970px;
-        height: 646px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
 .image-slider-prev,
 .image-slider-next {
     color: @secondary;
-    top: 14%;
+    top: 16%;
+
+    &::after {
+        font-size: 48px !important;
+    }
 }
 
 .image-slider-prev {
-    left: 79%;
+    left: 73%;
     right: 20px;
-
-    &::after {
-        font-size: 48px !important;
-    }
 }
 
 .image-slider-next {
-    left: 86%;
-
-    &::after {
-        font-size: 48px !important;
-    }
+    left: 78%;
 }
 
 //Next section
 
 .contacts {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     &__inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: start;
         align-items: start;
-        gap: 40px;
+        gap: 94px;
     }
 
     &__title {
-        margin-bottom: 25px;
-        font-size: 35px;
+        margin-bottom: 35px;
+        font-size: 48px;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 1.83;
     }
 
     &__icon {
@@ -635,30 +634,36 @@ body {
     &__list-item {
         margin-bottom: 40px;
         display: flex;
+        justify-content: start;
+        align-items: center;
         gap: 16px;
     }
 
     &__info-title {
         color: @fifthgrey;
-        line-height: 32px;
+        line-height: 2;
     }
 
     &__info-text {
         color: @fifthgrey;
         font-size: 24px;
-        line-height: 32px;
+        line-height: 1.33;
         font-weight: 500;
     }
 }
 
+.form-questions * {
+    outline: none;
+}
+
 .form-questions {
-    margin-bottom: 50px;
+    margin-bottom: 41px;
 
     &__title {
-        margin-bottom: 25px;
-        font-size: 35px;
+        margin-bottom: 32px;
+        font-size: 48px;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 1.83;
         text-align: left;
     }
 
@@ -680,10 +685,10 @@ body {
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__logo {
-        margin-bottom: 20px;
         padding-right: 20px;
     }
 
@@ -694,9 +699,10 @@ body {
     }
 
     &__social-links {
-        margin-bottom: 22px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        gap: 25px;
     }
 
     &__social-link {
@@ -704,12 +710,8 @@ body {
         transition: all 0.5s ease 0s;
 
         &:hover {
-            opacity: 0.6;
+            opacity: 0.3;
         }
-    }
-
-    &__social-link+.footer__social-link {
-        padding-left: 20px;
     }
 
     &__social-img {
